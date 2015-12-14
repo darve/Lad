@@ -92,6 +92,26 @@ var Vec     = require('./modules/Vec'),
         render();
     }
 
+    function home() {
+        lads.forEach(function(lad, i){
+            lad.home('easeOutElastic', Math.random()*100);
+        });
+    }
+    window.home = home;
+
+    function explode() {
+        lads.forEach(function(lad, i){
+            lad.queue('position', {
+                speed: Math.random()*100,
+                easing: 'easeOutElastic',
+                end: {
+                    pos: new Vec( M.rand(0, w), M.rand(0, h) )
+                }
+            });
+        });
+    }
+    window.explode = explode;
+
     function init() {
 
         gfx.init({
