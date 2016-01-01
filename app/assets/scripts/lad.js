@@ -1557,12 +1557,14 @@
  * -----------------------------
  */
 
-var Vec     = require('./modules/Vec'),
-    PIXI    = require('pixi'),
+var
+    Vec     = require('./modules/Vec'),
     gfx     = require('./modules/Graphics'),
-    $       = require('jquery'),
     M       = require('./modules/Math'),
-    Lad     = require('./modules/Lad');
+    Lad     = require('./modules/Lad'),
+
+    PIXI    = require('pixi'),
+    $       = require('jquery');
 
 (function(win, doc, c) {
 
@@ -1636,10 +1638,14 @@ var Vec     = require('./modules/Vec'),
                     alpha: 1
                 }
             });
+
             lads.push(lad);
             layers.lads.addChild(lad.sprite);
         }
-
+        home();
+        explode();
+        home();
+        explode();
         render();
     }
 

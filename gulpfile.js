@@ -57,7 +57,7 @@ gulp.task('scripts', ['jshint'], function () {
 
     return browserify({ entries: './src/scripts/app.js', noParse: ['./src/vendor/pixi.min.js'], debug: true })
         .bundle()
-        .pipe(source('wax.js'))
+        .pipe(source('lad.js'))
         .pipe(buffer())
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(gulpif(argv.production, uglify()))
