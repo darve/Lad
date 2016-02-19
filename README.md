@@ -1,3 +1,4 @@
-### Wax
+### Lad.js
 
-A dead simple canvas app boilerplate. Uses Compass for SCSS compilation.
+A particle tweening engine.
+
